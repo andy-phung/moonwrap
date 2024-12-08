@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+.body {
+  width: 90.5%;
+}
+
+.bg-color {
+  background-color: #F6F2F0;
+}
+
+.bg-color-text {
+  color: #F6F2F0;
+}
+
+.text-color {
+  color: #343434;
+}
+
+@font-face {
+  font-family: 'noto-sans';
+  src: url('../public/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'aktiv-grotesk-xbold';
+  src: url('../public/fonts/AktivGroteskExXBold.ttf');
+}
+
+@font-face {
+  font-family: 'moonwrap';
+  src: url('../public/fonts/Moonwrap.otf');
+}
+
+.main-font {
+  font-family: 'noto-sans';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-font-italic {
+  font-family: 'noto-sans';
+  font-weight: normal;
+  font-style: italic;
+}
+
+.section-header-font {
+  font-family: 'aktiv-grotesk-xbold';
+}
+
+.moonwrap {
+  font-family: 'moonwrap';
+}
+
+.section-header-misc {
+  container-name: hi;
+  container-type: normal;
+}
+
+.container-def {
+  container-type: size;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+.text-nohover {
+
+}
+
+.text-nohover:hover {
+  cursor: default;
+}
+
+.second-width {
+  width: 73.7vw;
+}
+
+.third-width {
+  width: 82.8vw;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
