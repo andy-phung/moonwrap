@@ -124,3 +124,16 @@ input:focus::placeholder {
 input[type=text]:focus {
   outline: none;
 }
+
+.hover-class {
+
+}
+
+.hover-class:hover {
+  background-color: #FFFCFB;
+  cursor: pointer;
+}
+
+.letterbox-selected {
+  background-color: #FFFFFF;
+}

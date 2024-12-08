@@ -15,18 +15,18 @@ const Landing = ({primaryColor, secondaryColor}) => {
     <div className="h-dvh w-100 flex justify-center text-color">
           <div className="body flex flex-col items-center flex-nowrap" >
             <div className=" h-auto w-100 flex justify-center mt-[16vh] mb-[-6vh]">
-              <div className="text-[160px] moonwrap h-auto">
+              <div className="text-[160px] moonwrap h-auto text-nohover">
                 MOON
               </div>
               <div className="w-[100px] h-[100px]">
 
               </div>
-              <div className="text-[160px] moonwrap h-auto">
+              <div className="text-[160px] moonwrap h-auto text-nohover">
                 WRAP
               </div>
             </div>
-            <div className="text-center moonwrap text-[45px] h-auto">
-              RICE CAKE AS TYPEFACE
+            <div className="text-center moonwrap text-[45px] h-auto text-nohover">
+              SUBTITLE GOES HERE
             </div>
           </div>
     </div>

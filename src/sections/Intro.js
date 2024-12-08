@@ -59,13 +59,13 @@ const Intro = ({primaryColor, secondaryColor}) => {
           </div>
           <div className="w-100 h-[30vw] mt-[17vh] mb-[19.8vh] flex justify-center">
             <div className="border-4 border-black second-width h-100 flex justify-between">
-              <div className="border-4 border-blue-500 h-100 w-[30vw]">
+              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
                 detail 1
               </div>
-              <div className="border-4 border-blue-500 h-100 w-[30vw]">
+              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
                 detail 2
               </div>
-              <div className="border-4 border-blue-500 h-100 w-[30vw]">
+              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
                 detail 3
               </div>
             </div>
