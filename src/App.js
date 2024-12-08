@@ -6,9 +6,26 @@ import Intro from "./sections/Intro.js";
 import HowToMake from "./sections/HowToMake.js";
 import Footer from "./sections/Footer.js";
 
+import { useState, useEffect } from 'react';
+
 function App() {
-  const primaryColor = "#BB6F63";
-  const secondaryColor = "#DAB0AA";
+  const [primaryColor, setPrimaryColor] = useState('');
+  const [secondaryColor, setSecondaryColor] = useState('');
+
+  const colors = {
+    "red": ["#BB6F63", "#DAB0AA"],
+    "purple": ["#A56D6E", "#D8C0C1"]
+  }
+  const colors_keys = Object.keys(colors);
+
+  useEffect(() => {
+    let random_key = colors_keys[Math.floor(Math.random() * colors_keys.length)];
+    setPrimaryColor(colors[random_key][0]);
+    setSecondaryColor(colors[random_key][1]);
+  });
+
+  // const primaryColor = "#BB6F63";
+  // const secondaryColor = "#DAB0AA";
 
   const sn1 = "RICE CAKE AS TYPEFACE";
   const sn2 = "HOW TO MAKE";

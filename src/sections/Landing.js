@@ -12,9 +12,22 @@ const Landing = ({primaryColor, secondaryColor}) => {
 
   // test w/ 1280x732, includes browser+bookmarks
   return ( // gonna pick real main font later
-    <div className="h-dvh w-100 flex justify-center">
-          <div className="body" >
-            landing section
+    <div className="h-dvh w-100 flex justify-center text-color">
+          <div className="body flex flex-col items-center flex-nowrap" >
+            <div className=" h-auto w-100 flex justify-center mt-[16vh] mb-[-6vh]">
+              <div className="text-[160px] moonwrap h-auto">
+                MOON
+              </div>
+              <div className="w-[100px] h-[100px]">
+
+              </div>
+              <div className="text-[160px] moonwrap h-auto">
+                WRAP
+              </div>
+            </div>
+            <div className="text-center moonwrap text-[45px] h-auto">
+              RICE CAKE AS TYPEFACE
+            </div>
           </div>
     </div>
   );

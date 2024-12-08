@@ -38,7 +38,15 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
 
         <div className="w-100 h-[730px] mb-[90px] flex justify-center">
           <div className="border-red-400 border-4 second-width">
-            glyph grid
+            <div className="border-blue-400 border-4">
+              uppercase
+            </div>
+            <div className="border-blue-400 border-4">
+              lowercase
+            </div>
+            <div className="border-blue-400 border-4">
+              prefold + animation
+            </div>
           </div>
         </div>
 
