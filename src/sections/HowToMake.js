@@ -35,6 +35,35 @@ import X from "../pics/prefolds/prefolds_X.png";
 import Y from "../pics/prefolds/prefolds_Y.png";
 import Z from "../pics/prefolds/prefolds_Z.png";
 
+import lower_A from "../pics/prefolds/prefolds_1a.png";
+import lower_B from "../pics/prefolds/prefolds_1b.png";
+import lower_C from "../pics/prefolds/prefolds_1c.png";
+import lower_D from "../pics/prefolds/prefolds_1d.png";
+import lower_E from "../pics/prefolds/prefolds_1e.png";
+import lower_F from "../pics/prefolds/prefolds_1f.png";
+import lower_G from "../pics/prefolds/prefolds_1g.png";
+import lower_H from "../pics/prefolds/prefolds_1h.png";
+import lower_I from "../pics/prefolds/prefolds_1i.png";
+import lower_J from "../pics/prefolds/prefolds_1j.png";
+import lower_K from "../pics/prefolds/prefolds_1k.png";
+import lower_L from "../pics/prefolds/prefolds_1l.png";
+import lower_M from "../pics/prefolds/prefolds_1m.png";
+import lower_N from "../pics/prefolds/prefolds_1n.png";
+import lower_O from "../pics/prefolds/prefolds_1o.png";
+import lower_P from "../pics/prefolds/prefolds_1p.png";
+import lower_Q from "../pics/prefolds/prefolds_1q.png";
+import lower_R from "../pics/prefolds/prefolds_1r.png";
+import lower_S from "../pics/prefolds/prefolds_1s.png";
+import lower_T from "../pics/prefolds/prefolds_1t.png";
+import lower_U from "../pics/prefolds/prefolds_1u.png";
+import lower_V from "../pics/prefolds/prefolds_1v.png";
+import lower_W from "../pics/prefolds/prefolds_1w.png";
+import lower_X from "../pics/prefolds/prefolds_1x.png";
+import lower_Y from "../pics/prefolds/prefolds_1y.png";
+import lower_Z from "../pics/prefolds/prefolds_1z.png";
+
+import step4_string from "../pics/string.png";
+
 
 const LetterBox = ({letter, selected, clickFunc, hoverEnterFunc, hoverLeaveFunc}) => {
   const classname = (selected === letter ? "letterbox-selected " : "") + "text-nohover hover-class mb-[4px] mr-[4px] outline outline-[#343434] outline-4 main-font text-color m-0 w-[35px] h-[35px] flex justify-center items-center"
@@ -75,7 +104,33 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
     "W": W,
     "X": X,
     "Y": Y,
-    "Z": Z
+    "Z": Z,
+    "a": lower_A,
+    "b": lower_B,
+    "c": lower_C,
+    "d": lower_D,
+    "e": lower_E,
+    "f": lower_F,
+    "g": lower_G,
+    "h": lower_H,
+    "i": lower_I,
+    "j": lower_J,
+    "k": lower_K,
+    "l": lower_L,
+    "m": lower_M,
+    "n": lower_N,
+    "o": lower_O,
+    "p": lower_P,
+    "q": lower_Q,
+    "r": lower_R,
+    "s": lower_S,
+    "t": lower_T,
+    "u": lower_U,
+    "v": lower_V,
+    "w": lower_W,
+    "x": lower_X,
+    "y": lower_Y,
+    "z": lower_Z,
   }
 
   const uppercase_letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -147,8 +202,11 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
                 <div className="absolute left-[-62px] top-0 h-[50px] w-[50px] border-[#343434] border-[3.5px] rounded-[50%] flex justify-center items-center main-font text-[35px]">
                   4
                 </div>
-                <div className="h-[90%] w-100 relative">
-                  <img src={step4} className="h-full aspect-square absolute left-0"/>
+                <div className="h-[90%] w-full relative overflow-visible z-[0]">
+                  <div className="absolute top-0 right-0 h-[3150px] w-[1090px]">
+                    <img src={step4_string} className="h-[3150px] aspect-auto absolute top-0 right-0 left-0 bottom-0"/>
+                  </div>
+                  
                 </div>
                 <div className="h-[10%] w-[90%] main-font text-[2.4vh] absolute bottom-[-10px]">
                   Close unsealed gaps and tie off the parts that want to spring away.
@@ -158,7 +216,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
           </div>
         </div>
 
-        <div className="w-100 h-[350px] mb-[120px] flex justify-center">
+        <div className="w-100 h-[300px] mb-[120px] flex justify-center relative z-[1]">
           <div className="second-width flex flex-col justify-between">
             <div className="w-[535px] text-[2.4vh] main-font">
               These wrapping rules are vague by design—every person will have their own interpretation of how each letter is formed.
@@ -169,7 +227,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
           </div>
         </div>
 
-        <div className="w-100 h-[730px] mb-[90px] flex justify-center">
+        <div className="w-100 h-[730px] mb-[25px] flex justify-center relative z-[1]">
           <div className="second-width flex h-100 flex-row flex-nowrap justify-between">
             <div className="w-[125px] h-100 flex items-center flex-nowrap">
               <div className="h-[80%] w-[80%]">
@@ -198,7 +256,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
           </div>
         </div>
 
-        <div className="w-100 h-[300px] mb-[120px] flex justify-center">
+        <div className="w-100 h-[275px] mb-[80px] flex justify-center relative z-[1]">
           <div className="second-width flex flex-col justify-between">
             <div className=" w-[560px] text-[2.4vh] main-font text-right ml-auto">
               This means that every person will have their own version of the MOONWRAP alphabet.
@@ -208,14 +266,14 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
           </div>
         </div>
 
-        <div className="w-100 h-[730px] flex justify-center">
+        <div className="w-100 h-[680px] flex justify-center relative z-[1]">
           <div className="third-width h-100 flex justify-center items-center">
-            <input type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="bg-color w-[100%] h-[25vh] text-[9vw] moonwrap">
+            <input type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="bg-transparent w-[100%] h-[25vh] text-[9vw] moonwrap">
             </input>
           </div>
         </div>
 
-        <div className="w-100 h-[525px] mb-[175px] flex justify-center">
+        <div className="w-100 h-[480px] flex justify-center relative z-[1]">
           <div className="third-width">
             <div className="w-[575px] text-[2.4vh] main-font">
               Just as a <i>bánh tét</i> made lovingly by your parents is more special than one bought from a shop, a MOONWRAP letter is made unique by you, the person who wrapped it.
