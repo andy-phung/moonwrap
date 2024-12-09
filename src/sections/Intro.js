@@ -1,6 +1,12 @@
 import React from "react";
 import '../App.css';
 
+import detail1 from '../pics/detail1.png';
+import detail2 from '../pics/detail2.png';
+import detail3 from '../pics/detail3.png';
+
+import banhtet from '../pics/banhtet.png';
+
 const Intro = ({primaryColor, secondaryColor}) => {
   return ( // this should take in name as a parameter
     <div className="flex justify-center text-color">
@@ -14,8 +20,10 @@ const Intro = ({primaryColor, secondaryColor}) => {
             <br/><br/>
             Inspired by this beauty in simplicity, MOONWRAP is an exploration in generative type, where letters emerge from only simple wrapping rules and the placement of the <i>bánh tét</i>.
             </div>
-            <div className="min-h-10 w-[434px]">
-              pic (svg)
+            <div className="min-h-10 w-[434px] flex justify-center">
+              <div className="h-full aspect-square flex justify-center items-center">
+                <img src={banhtet} className="h-[40vh] aspect-square"/>
+              </div>
             </div>
           </div>
 
@@ -58,15 +66,15 @@ const Intro = ({primaryColor, secondaryColor}) => {
             </div>    
           </div>
           <div className="w-100 h-[30vw] mt-[17vh] mb-[19.8vh] flex justify-center">
-            <div className="border-4 border-black second-width h-100 flex justify-between">
-              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
-                detail 1
+            <div className="second-width h-100 flex justify-between">
+              <div className="h-[377px] w-[400px] flex justify-center items-center">
+                <img src={detail1} className="h-full"/>
               </div>
-              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
-                detail 2
+              <div className="h-[377px] w-[400px] flex justify-center items-center">
+                <img src={detail2} className="h-full"/>
               </div>
-              <div className="border-4 border-blue-500 h-[377px] w-[400px]">
-                detail 3
+              <div className="h-[377px] w-[400px] flex justify-center items-center">
+                <img src={detail3} className="h-full"/>
               </div>
             </div>
           </div>

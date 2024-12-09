@@ -9,8 +9,8 @@ import Footer from "./sections/Footer.js";
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [primaryColor, setPrimaryColor] = useState('');
-  const [secondaryColor, setSecondaryColor] = useState('');
+  let [primaryColor, setPrimaryColor] = useState('');
+  let [secondaryColor, setSecondaryColor] = useState('');
 
   const colors = {
     "red": ["#BB6F63", "#DAB0AA"],
@@ -24,8 +24,8 @@ function App() {
     setSecondaryColor(colors[random_key][1]);
   });
 
-  // const primaryColor = "#BB6F63";
-  // const secondaryColor = "#DAB0AA";
+  primaryColor = "#BB6F63";
+  secondaryColor = "#DAB0AA";
 
   const sn1 = "RICE CAKE AS TYPEFACE";
   const sn2 = "HOW TO MAKE";

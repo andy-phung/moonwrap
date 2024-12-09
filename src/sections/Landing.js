@@ -14,19 +14,25 @@ const Landing = ({primaryColor, secondaryColor}) => {
   return ( // gonna pick real main font later
     <div className="h-dvh w-100 flex justify-center text-color">
           <div className="body flex flex-col items-center flex-nowrap" >
-            <div className=" h-auto w-100 flex justify-center mt-[16vh] mb-[-6vh]">
-              <div className="text-[160px] moonwrap h-auto text-nohover">
+            <div className=" h-auto w-100 flex justify-center mt-[16vh] mb-[-6vh] relative">
+              <div className="text-[160px] moonwrap h-auto text-nohover absolute left-[-420px] z-[3]">
                 MOON
+                <div className="absolute text-[16px] main-font text-[#BB6F63] text-center bottom-[65px] left-0 right-0 z-[4]">
+                  <b>MOON</b>
+                </div>
               </div>
-              <div className="w-[100px] h-[100px]">
+              <div className="w-[170px] h-[170px] bg-[#DAB0AA] border-[#BB6F63] border-[14px] rounded-[50%] z-[2] mb-[50px]">
 
               </div>
-              <div className="text-[160px] moonwrap h-auto text-nohover">
+              <div className="text-[160px] moonwrap h-auto text-nohover absolute right-[-360px] z-[1]">
                 WRAP
+                <div className="absolute text-[16px] main-font text-[#BB6F63] text-center bottom-[65px] left-0 right-0 z-[4]">
+                  <b>WRAP</b>
+                </div>
               </div>
             </div>
             <div className="text-center moonwrap text-[45px] h-auto text-nohover">
-              SUBTITLE GOES HERE
+              RICE CAKE AS TYPEFACE
             </div>
           </div>
     </div>
