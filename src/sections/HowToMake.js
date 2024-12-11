@@ -77,6 +77,7 @@ const LetterBox = ({letter, selected, clickFunc, hoverEnterFunc, hoverLeaveFunc}
 const HowToMake = ({primaryColor, secondaryColor}) => {
   const [currentLetter, setCurrentLetter] = useState("A");
   const [hoverLetter, setHoverLetter] = useState("A");
+  const [interactiveFocus, setInteractiveFocus] = useState(false);
 
   const letter_map = {
     "A": A,
@@ -138,16 +139,12 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
 
   const uppercase_letter_blocks = [];
   for (let i = 0; i < 26; i++) {
-      // note: we are adding a key prop here to allow react to uniquely identify each
-      // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-      uppercase_letter_blocks.push(<LetterBox letter={uppercase_letters[i]} selected={currentLetter} clickFunc={() => setCurrentLetter(uppercase_letters[i])} hoverEnterFunc={() => setHoverLetter(uppercase_letters[i])} hoverLeaveFunc={() => setHoverLetter(currentLetter)}/>);
+      uppercase_letter_blocks.push(<LetterBox onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} letter={uppercase_letters[i]} selected={currentLetter} clickFunc={() => setCurrentLetter(uppercase_letters[i])} hoverEnterFunc={() => setHoverLetter(uppercase_letters[i])} hoverLeaveFunc={() => setHoverLetter(currentLetter)}/>);
   }
 
   const lowercase_letter_blocks = [];
   for (let i = 0; i < 26; i++) {
-      // note: we are adding a key prop here to allow react to uniquely identify each
-      // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-      lowercase_letter_blocks.push(<LetterBox letter={lowercase_letters[i]} selected={currentLetter} clickFunc={() => setCurrentLetter(lowercase_letters[i])} hoverEnterFunc={() => setHoverLetter(uppercase_letters[i])} hoverLeaveFunc={() => setHoverLetter(currentLetter)}/>);
+      lowercase_letter_blocks.push(<LetterBox onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} letter={lowercase_letters[i]} selected={currentLetter} clickFunc={() => setCurrentLetter(lowercase_letters[i])} hoverEnterFunc={() => setHoverLetter(uppercase_letters[i])} hoverLeaveFunc={() => setHoverLetter(currentLetter)}/>);
   }
 
   return ( // this should take in name as a parameter
@@ -180,7 +177,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
                   <img src={step2} className="h-full aspect-square absolute left-0"/>
                 </div>
                 <div className="h-[10%] w-100 main-font text-[2.4vh] absolute bottom-[-10px]">
-                  Place the edges of folded sides on top of the <i>bánh</i>.
+                  Place folded sides on top of the <i>bánh</i>.
                 </div>
               </div>
             </div>
@@ -204,7 +201,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
                 </div>
                 <div className="h-[90%] w-full relative overflow-visible z-[0]">
                   <div className="absolute top-0 right-0 h-[3150px] w-[1090px]">
-                    <img src={step4_string} className="h-[3150px] aspect-auto absolute top-0 right-0 left-0 bottom-0"/>
+                    <img src={step4_string} className={(interactiveFocus ? "opacity-50 " : "") + "h-[3150px] aspect-auto absolute top-0 right-0 left-0 bottom-0"}/>
                   </div>
                   
                 </div>
@@ -222,7 +219,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
               These wrapping rules are vague by design—every person will have their own interpretation of how each letter is formed.
             </div>
             <div className="w-[535px] text-[2.4vh] main-font text-right ml-auto">
-              "Place edges on top of the <i>bánh</i>" might mean right in the middle of it, or to the edge of it, or something else entirely. Some may interpret "close unsealed gaps" as folding them over, or even twisting them shut.
+              "Place folded sides on top of the <i>bánh</i>" might mean right in the middle of it, or to the edge of it, or something else entirely. Some may interpret "close unsealed gaps" as folding them over, or even twisting them shut.
             </div>
           </div>
         </div>
@@ -262,13 +259,13 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
               This means that every person will have their own version of the MOONWRAP alphabet.
             </div>
             <div className=" w-[575px] text-[2.4vh] main-font">
-              MOONWRAP was designed to translate that originality, sentimentality, and personality in the traditional process of hand-making <i>bánh tét</i> into a letterform—one that you can make your own.            </div>
+              MOONWRAP was designed to translate the originality and sentimentality in the traditional process of hand-making <i>bánh tét</i> into a letterform—one that you can make your own.            </div>
           </div>
         </div>
 
         <div className="w-100 h-[680px] flex justify-center relative z-[1]">
           <div className="third-width h-100 flex justify-center items-center">
-            <input type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="bg-transparent w-[100%] h-[25vh] text-[9vw] moonwrap">
+            <input onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="hover-class-input bg-transparent w-[100%] h-[25vh] text-[9vw] moonwrap">
             </input>
           </div>
         </div>
@@ -276,7 +273,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
         <div className="w-100 h-[480px] flex justify-center relative z-[1]">
           <div className="third-width">
             <div className="w-[575px] text-[2.4vh] main-font">
-              Just as a <i>bánh tét</i> made lovingly by your parents is more special than one bought from a shop, a MOONWRAP letter is made unique by you, the person who wrapped it.
+              Just as a <i>bánh tét</i> made by your parents is more special than one bought from a shop, a MOONWRAP letter is made unique by you, the person who wrapped it.
             </div>
           </div>
         </div>

@@ -13,17 +13,15 @@ const Intro = ({primaryColor, secondaryColor}) => {
         <div className="body">
 
           <div className="max-w-100 min-h-10 text-[2.4vh] main-font flex flex-wrap justify-between mt-[7.33vh]">
-            <div className="min-h-10 w-[650px]">
-            As legend has it, the poorest prince of the <i>Hồng Bàng</i> dynasty in Vietnam won the right to the throne by creating <i>bánh tét</i>, a sticky rice cake wrapped in banana leaves that was praised for being delicious despite being simple.
+            <div className="min-h-10 w-[600px]">
+            According to legend, the poorest prince of the <i>Hồng Bàng</i> dynasty in Vietnam won the right to the throne by creating <i>bánh tét</i>, a sticky rice cake wrapped in banana leaves. It was renowned for being delicious despite using just three ingredients—mung bean, pork, and sticky rice.
             <br/><br/>
             In modern times, <i>bánh tét</i> is traditionally made by families to celebrate <i>tết</i>, or Vietnamese lunar new year. The few number of steps involved means that anyone in the family can help make it, no matter how young or old.
             <br/><br/>
-            Inspired by this beauty in simplicity, MOONWRAP is an exploration in generative type, where letters emerge from only simple wrapping rules and the placement of the <i>bánh tét</i>.
+            Inspired by the simplicity of this tradition, MOONWRAP is an exploration in generative type, where letters emerge from only simple wrapping rules and the placement of the <i>bánh tét</i>.
             </div>
-            <div className="min-h-10 w-[434px] flex justify-center">
-              <div className="h-full aspect-square flex justify-center items-center">
-                <img src={banhtet} className="h-[40vh] aspect-square"/>
-              </div>
+            <div className="min-h-10 w-[520px] relative flex justify-center">
+              <img src={banhtet} className="h-full w-full"/>
             </div>
           </div>
 
@@ -52,16 +50,16 @@ const Intro = ({primaryColor, secondaryColor}) => {
             </div>
             <div className="flex flex-col items-center container-def text-nohover">
               <div className="moonwrap text-[9.85cqw] mt-[-2.5vh]">
-                Xuân đã về, xuân đã về
+                ®üǡn đą về, ±üân đą về
               </div>
-              <div className="moonwrap text-[5.65cqw] mt-[-7.5vh]">
-                Ngàn hoa hé môi cười tươi đón gió mới
+              <div className="moonwrap text-[5.3cqw] mt-[-7.5vh]">
+                Ñgän °öa °é m»i ćµời ṭµơi đ¬n gi¬ mªi
               </div>
               <div className="moonwrap text-[9.85cqw] mt-[-6vh]">
-                Xuân đã về, xuân đã về
+                ®üǡn đą về, ±üǡn đą về
               </div>
-              <div className="moonwrap text-[5.6cqw] mt-[-7vh]">
-                Ta hát vang lên câu ca mừng chào xuân
+              <div className="moonwrap text-[5.45cqw] mt-[-7vh]">
+                Ťa °ȁt vāng lên ćǡü ćā mừng ćhäo ±üǡn
               </div>
             </div>    
           </div>
