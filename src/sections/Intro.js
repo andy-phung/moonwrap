@@ -25,7 +25,7 @@ const Intro = ({primaryColor, secondaryColor}) => {
             </div>
           </div>
 
-          <div className="w-100 h-[27vw] mt-[18vh]">
+          <div className="w-100 h-[27vw] mt-[12vh]">
             <div className="main-font text-[2.4vh]">
               Moonwrap AP
             </div>
@@ -63,7 +63,7 @@ const Intro = ({primaryColor, secondaryColor}) => {
               </div>
             </div>    
           </div>
-          <div className="w-100 h-[30vw] mt-[17vh] mb-[19.8vh] flex justify-center">
+          <div className="w-100 h-[30vw] mt-[10vh] mb-[18vh] flex justify-center">
             <div className="second-width h-100 flex justify-between">
               <div className="h-[377px] w-[400px] flex justify-center items-center">
                 <img src={detail1} className="h-full"/>
