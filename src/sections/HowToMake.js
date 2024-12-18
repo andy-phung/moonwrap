@@ -1,7 +1,7 @@
 import React from "react";
 import '../App.css';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import step1 from '../pics/step1.png';
 import step2 from '../pics/step2.png';
@@ -78,6 +78,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
   const [currentLetter, setCurrentLetter] = useState("A");
   const [hoverLetter, setHoverLetter] = useState("A");
   const [interactiveFocus, setInteractiveFocus] = useState(false);
+  const inputRef = useRef(null);
 
   const letter_map = {
     "A": A,
@@ -146,6 +147,11 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
   for (let i = 0; i < 26; i++) {
       lowercase_letter_blocks.push(<LetterBox onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} letter={lowercase_letters[i]} selected={currentLetter} clickFunc={() => setCurrentLetter(lowercase_letters[i])} hoverEnterFunc={() => setHoverLetter(uppercase_letters[i])} hoverLeaveFunc={() => setHoverLetter(currentLetter)}/>);
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {setInteractiveFocus(false); inputRef.current.blur();});
+    //return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return ( // this should take in name as a parameter
     // red string starts at step 4 pic, fix to top right of step 4 div
@@ -265,7 +271,7 @@ const HowToMake = ({primaryColor, secondaryColor}) => {
 
         <div className="w-100 h-[680px] flex justify-center relative z-[1]">
           <div className="third-width h-100 flex justify-center items-center">
-            <input onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="hover-class-input bg-transparent w-[100%] h-[25vh] text-[9vw] moonwrap">
+            <input ref={inputRef} onFocus={() => setInteractiveFocus(true)} onBlur={() => {setInteractiveFocus(false)}} type="text" spellcheck="false" placeholder="Chúc mừng năm mới!" className="hover-class-input bg-transparent w-[100%] h-[25vh] text-[9vw] moonwrap">
             </input>
           </div>
         </div>

@@ -74,7 +74,7 @@ const Landing = ({primaryColor, secondaryColor}) => {
     setText(["MOON", "MOON", "ϼψͱφ", "WRAP", ""]);
     await wait(300);
     setText(["MOON", "MOON", "WRAP", "WRAP", ""]);
-    await wait(1000);
+    await wait(700);
     setText(["MOON", "MOON", "WRAP", "WRAP", "Ͱ ΓΘͲω ͲχσΞ ϻσϜ."]);
     await wait(300);
     setText(["MOON", "MOON", "WRAP", "WRAP", "ͱ ΔΛͳϕ ͳψτΠ Єτϝ."]);
@@ -87,8 +87,8 @@ const Landing = ({primaryColor, secondaryColor}) => {
   }, []); 
 
   return ( // gonna pick real main font later
-    <div className="h-dvh w-100 flex justify-center text-color relative">
-          <img src={landing} className="absolute h-full"/>
+    <div className="h-dvh w-100 flex justify-center text-color relative overflow-y-hidden">
+          <img src={landing} className="absolute object-contain bottom-0"/>
           <div className="body flex flex-col items-center flex-nowrap z-10" >
             <div className=" h-auto w-100 flex justify-center mt-[21vh] mb-[-6vh] relative">
               <div className="text-[160px] moonwrap h-auto text-nohover absolute left-[-420px] z-[3]">
