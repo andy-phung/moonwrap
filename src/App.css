@@ -1,5 +1,5 @@
 html, body {
-  cursor: url("C:\\Users\\andyp\\Documents\\4.053\\final project\\4053-website\\src\\pics\\cursor1.svg"), auto;
+  cursor: url("./pics/cursor1.svg"), auto;
 }
 
 .App {
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .text-nohover:hover {
-  cursor: url("C:\\Users\\andyp\\Documents\\4.053\\final project\\4053-website\\src\\pics\\cursor1.svg"), auto;
+  cursor: url("./pics/cursor1.svg"), auto;
 }
 
 .second-width {
@@ -135,7 +135,7 @@ input[type=text]:focus {
 
 .hover-class:hover {
   background-color: #FFFCFB;
-  cursor: url("C:\\Users\\andyp\\Documents\\4.053\\final project\\4053-website\\src\\pics\\cursor2.svg"), auto;
+  cursor: url("./pics/cursor2.svg"), auto;
 }
 
 .hover-class-input {
@@ -143,7 +143,7 @@ input[type=text]:focus {
 }
 
 .hover-class-input:hover{
-  cursor: url("C:\\Users\\andyp\\Documents\\4.053\\final project\\4053-website\\src\\pics\\cursor2.svg"), auto;
+  cursor: url("./pics/cursor2.svg"), auto;
 }
 
 .letterbox-selected {
