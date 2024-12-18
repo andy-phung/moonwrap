@@ -32,7 +32,7 @@ const Landing = ({primaryColor, secondaryColor}) => {
     // setText(["MO2\u00A0", "MOO\u00A0", "", "", ""]);
     // await wait(300);
     // setText(["MOO\u00A0", "MOO\u00A0", "", "", ""]);
-    await wait(700);
+    await wait(1000);
     setText(["Ξσσρ", "MOON", "", "", ""]);
     await wait(300);
     setText(["Πττς", "MOON", "", "", ""]);
